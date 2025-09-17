@@ -1,0 +1,50 @@
+
+<div class="container"> 
+
+  <div class="display-4 text-center mb-4">Cadastro de Professores</div>
+
+  <form [formGroup]="formGroupTeacher">
+    <div class="mb-3">
+      <label for="inputId" class="form-label">ID</label>
+      <input formControlName="id" type="text" class="form-control" id="inputId">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputName" class="form-label">Nome</label>
+      <input formControlName="name" type="text" class="form-control" id="inputName">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputSpecialty" class="form-label">Especialidade</label>
+      <input formControlName="speciality" type="text" class="form-control" id="inputSpecialty">
+    </div> 
+
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input formControlName="email" type="text" class="form-control" id="inputEmail">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputPhone" class="form-label">Telefone</label>
+      <input formControlName="phone" type="text" class="form-control" id="inputPhone">
+    </div>
+    <button type="button" class="btn btn-success" (click)="save()">Salvar</button>
+  </form>
+  <hr>
+  <div class="row">
+    <div *ngFor="let p of teachers" class="col-md-4">
+      <div class="card shadow mt-3" style="width: 50%;">
+        <img src="https://cdn-icons-png.freepik.com/512/4664/4664514.png" class="card-img-top" alt="Foto Professor">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text">
+            <strong>ID:</strong> {{ p.id }} <br>
+            <strong>Especialidade:</strong> {{ p.speciality }} <br>
+            <strong>Email:</strong> {{ p.email }} <br>
+            <strong>Telefone:</strong> {{ p.phone }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
