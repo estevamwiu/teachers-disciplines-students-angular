@@ -1,24 +1,24 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Home } from './home/home';
-import { Teacher } from './teacher/teacher';
-import { NavBar } from './nav-bar/nav-bar';
-import { Footer } from './footer/footer';
-import { Subjects } from './subjects/subjects';
+import { provideHttpClient } from '@angular/common/http';
+import { TeacherComponent } from './teacher-component/teacher-component';
+import { FooterComponent } from './footer-component/footer-component';
+import { HomeComponent } from './home-component/home-component';
+import { NavBarComponent } from './nav-bar-component/nav-bar-component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatterComponent } from './matter-component/matter-component';
 
 @NgModule({
   declarations: [
     App,
-    Home,
-    Teacher,
-    NavBar,
-    Footer,
-    Subjects
+    TeacherComponent,
+    FooterComponent,
+    HomeComponent,
+    NavBarComponent,
+    MatterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })

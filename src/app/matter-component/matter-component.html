@@ -1,0 +1,60 @@
+<div class="container"> 
+
+  <div class="display-4 text-center mb-4">Cadastro de Disciplinas</div>
+<form [formGroup]="formGroupMatter">
+    <div class="mb-3">
+      <label for="inputName" class="form-label">Nome da Disciplina</label>
+      <input formControlName="name2" type="text" class="form-control" id="inputName">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputWorkLoad" class="form-label">Carga Horária</label>
+      <input formControlName="workload" type="text" class="form-control" id="inputWorkLoad">
+    </div>
+    <div class="mb-3">
+      <label for="inputSemester" class="form-label">Semestre</label>
+      <input formControlName="semester" type="text" class="form-control" id="inputSemester">
+    </div>
+    <div class="mb-3">
+  <label class="form-label">Turno</label>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" formControlName="turn" id="turnoManha" value="Manhã">
+    <label class="form-check-label" for="turnoManha">
+      Manhã
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" formControlName="turn" id="turnoTarde" value="Tarde">
+    <label class="form-check-label" for="turnoTarde">
+      Tarde
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" formControlName="turn" id="turnoNoite" value="Noite">
+    <label class="form-check-label" for="turnoNoite">
+      Noite
+    </label>
+  </div>
+</div>
+    <button type="button" class="btn btn-success" (click)="save()">Salvar</button>
+  </form>
+  <hr>
+  <div class="row">
+    <div *ngFor="let p of matters" class="col-md-4">
+      <div class="card shadow mt-3" style="width: 20%;">
+        <img src="5229603.png" class="card-img-top" alt="Foto Disciplina">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.name2 }}</h5>
+          <p class="card-text">
+            <strong>Nome:</strong> {{ p.name2 }} <br>
+            <strong>Carga Horária:</strong> {{ p.workload }} <br>
+            <strong>Semestre:</strong> {{ p.semester }} <br>
+            <strong>Turno:</strong> {{ p.turn }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
