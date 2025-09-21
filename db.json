@@ -1,55 +1,19 @@
 {
-  "matters": [
-    {
-      "id": 1,
-      "name2": "Matematica",
-      "workload": 60,
-      "semester": 1,
-      "turn": "manha"
-    },
-    {
-      "id": 2,
-      "name2": "Matematica",
-      "workload": 60,
-      "semester": 1,
-      "turn": "noite"
-    },
-    {
-      "id": 3,
-      "name2": "Matematica",
-      "workload": 60,
-      "semester": 1,
-      "turn": "tarde"
-    },
-    {
-      "id": 4,
-      "name2": "Matematica",
-      "workload": 60,
-      "semester": 1,
-      "turn": "manha"
-    },
-    {
-      "name2": "a",
-      "workload": "a",
-      "semester": "a",
-      "turn": "Tarde",
-      "id": 5
-    }
-  ],
+  "matters": [],
   "teachers": [
     {
       "id": 1,
-      "name": "a",
-      "speciality": "a",
-      "email": "a",
-      "phone": "a"
+      "name": "",
+      "speciality": "",
+      "email": "",
+      "phone": ""
     },
     {
-      "id": "a",
-      "name": "a",
-      "speciality": "a",
-      "email": "a",
-      "phone": "a"
+      "id": 2,
+      "name": null,
+      "speciality": null,
+      "email": null,
+      "phone": null
     }
   ]
 }

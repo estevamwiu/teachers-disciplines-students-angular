@@ -16,6 +16,7 @@ export class MatterComponent implements OnInit {
 
     constructor (private formBuilder: FormBuilder, private service: MaService) {
         this.formGroupMatter = this.formBuilder.group({
+          id: [''],
           name2: [''],
           workload: [''],
           semester: [''],
@@ -35,4 +36,13 @@ export class MatterComponent implements OnInit {
             }
         });
     }
+     delete(ma: Matter) {
+        this.service.delete(ma).subscribe(
+      {
+            next: () => {
+                this.matters = this.matters.filter(p => p.id != ma.id);
+        }
+      }
+    )
+}
 }

@@ -37,4 +37,13 @@ export class TeacherComponent implements OnInit {
             }
         });
     }
+    delete(teachers: Teach) {
+        this.service.delete(teachers).subscribe(
+      {
+            next: () => {
+                this.teachers = this.teachers.filter(p => p.id != teachers.id);
+            }
+      }
+    )
+  }
 }

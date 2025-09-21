@@ -17,4 +17,8 @@ export class TeacherService {
     saveTeacher(teacher: Teach): Observable<Teach> {
       return this.http.post<Teach>(this.apiUrl, teacher);
     }
+
+    delete(teachers: Teach): Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/${teachers.id}`);
+ }
 }

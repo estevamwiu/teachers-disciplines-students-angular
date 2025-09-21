@@ -17,4 +17,8 @@ export class MaService {
     saveMatter(ma: Matter): Observable<Matter> {
       return this.http.post<Matter>(this.apiUrl, ma);
     }
+
+    delete(ma: Matter): Observable<void>{
+      return this.http.delete<void>(`${this.apiUrl}/${ma.id}`);
+     }
 }

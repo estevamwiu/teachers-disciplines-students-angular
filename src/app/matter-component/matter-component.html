@@ -3,6 +3,11 @@
   <div class="display-4 text-center mb-4" class = "font">Disciplinas Acadêmicas</div>
 <form [formGroup]="formGroupMatter">
     <div class="mb-3">
+      <label for="inputId" class="form-label">ID da Disciplina</label>
+      <input formControlName="id" type="text" class="form-control" id="inputId">
+    </div>
+
+    <div class="mb-3">
       <label for="inputName" class="form-label">Nome da Disciplina</label>
       <input formControlName="name2" type="text" class="form-control" id="inputName">
     </div>
@@ -49,8 +54,12 @@
         <div class="card-body">
           <h5 class="card-title">{{ p.name2 }}</h5>
           <p class="card-text">
+            <strong>ID:</strong> {{ p.id }} <br>
             <strong>Carga Horária:</strong> {{ p.workload }} <br>
             <strong>Semestre:</strong> {{ p.semester }} <br>
+            <button class="btn btn-danger" (click)="delete(p)">
+            Remover
+            </button>
         </div>
       </div>
     </div>

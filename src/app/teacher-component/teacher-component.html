@@ -39,6 +39,9 @@
             <strong>ID:</strong> {{ p.id }} <br>
             <strong>Especialidade:</strong> {{ p.speciality }} <br>
           </p>
+            <button class="btn btn-danger" (click)="delete(p)">
+            Remover
+          </button>
         </div>
       </div>
     </div>
