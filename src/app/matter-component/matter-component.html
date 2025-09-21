@@ -1,6 +1,6 @@
 <div class="container"> 
 
-  <div class="display-4 text-center mb-4">Cadastro de Disciplinas</div>
+  <div class="display-4 text-center mb-4" class = "font">Disciplinas Acadêmicas</div>
 <form [formGroup]="formGroupMatter">
     <div class="mb-3">
       <label for="inputName" class="form-label">Nome da Disciplina</label>
@@ -39,20 +39,18 @@
     </label>
   </div>
 </div>
-    <button type="button" class="btn btn-success" (click)="save()">Salvar</button>
+    <button type="button" class="btn btn-primary" (click)="save()">Salvar</button>
   </form>
   <hr>
   <div class="row">
     <div *ngFor="let p of matters" class="col-md-4">
-      <div class="card shadow mt-3" style="width: 20%;">
-        <img src="5229603.png" class="card-img-top" alt="Foto Disciplina">
+      <div class="card shadow mt-3" style="width: 150px;">
+        <img src="matter.png" class="card-img-top" alt="Foto Disciplina">
         <div class="card-body">
           <h5 class="card-title">{{ p.name2 }}</h5>
           <p class="card-text">
-            <strong>Nome:</strong> {{ p.name2 }} <br>
             <strong>Carga Horária:</strong> {{ p.workload }} <br>
             <strong>Semestre:</strong> {{ p.semester }} <br>
-            <strong>Turno:</strong> {{ p.turn }}
         </div>
       </div>
     </div>
