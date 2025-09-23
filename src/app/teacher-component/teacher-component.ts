@@ -13,6 +13,7 @@ export class TeacherComponent implements OnInit {
 
     teachers: Teach [] = [];
     formGroupTeacher: FormGroup;
+    isEditing: boolean = false;
 
     constructor(private formBuilder: FormBuilder, private service: TeacherService) {
         this.formGroupTeacher = this.formBuilder.group({
@@ -37,7 +38,7 @@ export class TeacherComponent implements OnInit {
             }
         });
     }
-    delete(teachers: Teach) {
+    OnClickDelete(teachers: Teach) {
         this.service.delete(teachers).subscribe(
       {
             next: () => {
@@ -45,5 +46,21 @@ export class TeacherComponent implements OnInit {
             }
       }
     )
+  }
+    OnClickUpdate (teachers: Teach) {
+        this.formGroupTeacher.setValue(teachers);
+        this.isEditing = true;
+  }
+    update() {
+        this.service.update(this.formGroupTeacher.value).subscribe(
+        {
+          next: json => {
+            let index = this.teachers.findIndex(p => p.id == json.id);
+            this.teachers[index] = json;
+            this.isEditing = false;
+            this.formGroupTeacher.reset();
+          }
+        }
+      )
   }
 }

@@ -1,5 +1,4 @@
 {
-  "matters": [],
   "teachers": [
     {
       "id": 1,
@@ -7,13 +6,6 @@
       "speciality": "",
       "email": "",
       "phone": ""
-    },
-    {
-      "id": 2,
-      "name": null,
-      "speciality": null,
-      "email": null,
-      "phone": null
     }
   ]
 }

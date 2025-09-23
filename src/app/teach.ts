@@ -1,5 +1,5 @@
 export interface Teach {
-    id: number;
+    id?: number;
     name: string;
     speciality: string;
     email: string;

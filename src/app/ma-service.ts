@@ -21,4 +21,7 @@ export class MaService {
     delete(ma: Matter): Observable<void>{
       return this.http.delete<void>(`${this.apiUrl}/${ma.id}`);
      }
+
+     
 }
+
