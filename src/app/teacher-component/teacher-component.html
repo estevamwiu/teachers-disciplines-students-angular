@@ -1,6 +1,6 @@
 <div class="container"> 
 
-  <div class="display-4 text-center mb-4 "class = "font">Cadastrar Professor</div>
+  <div class="display-4 text-center mb-4">Cadastrar Professor</div>
 <form [formGroup]="formGroupTeacher">
     <div class="mb-3">
       <label for="inputId" class="form-label">ID</label>
@@ -26,19 +26,47 @@
       <label for="inputPhone" class="form-label">Telefone</label>
       <input formControlName="phone" type="text" class="form-control" id="inputPhone">
     </div>
+      Selecione uma Disciplina:<br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" formControlName="portuguese" id="portuguese">
+      <label class="form-check-label" for="portuguese">Português</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" formControlName="math" id="math">
+      <label class="form-check-label" for="math">Matemática</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" formControlName="science" id="science">
+      <label class="form-check-label" for="science">Ciências</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" formControlName="history" id="history">
+      <label class="form-check-label" for="history">História</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" formControlName="geography" id="geography">
+      <label class="form-check-label" for="geography">Geografia</label>
+    </div>
+    
+    <br>
     <button *ngIf="!isEditing" type="button" class="btn btn-primary me-2"(click)="save()">Salvar</button>
     <button *ngIf="isEditing" type="submit" class="btn btn-primary"(click)="update()">Atualizar</button>
   </form>
 <hr>
+  Professores Cadastrados: {{teachers.length}}
   <div class="row">
     <div *ngFor="let p of teachers" class="col-md-4">
-      <div class="card shadow mt-3" style="width: 250px;">
+      <div class="card shadow mt-3" style="width: 300px;">
         <img src="teacher.png" class="card-img-top" alt="Foto Professor">
         <div class="card-body">
           <h5 class="card-title">{{ p.name }}</h5>
           <p class="card-text">
             <strong>ID:</strong> {{ p.id }} <br>
-            <strong>Especialidade:</strong> {{ p.speciality }} <br>
+            <strong>Especialidade:</strong> {{ p.speciality }}
+            <br>
+            <strong>Email:</strong> {{ p.email }}<br>
+            <strong>Telefone:</strong> {{ p.phone }} <br>
+            <strong>Disciplina:</strong> {{ getSubjects(p) }}
           </p>
           <td>
             <button class="btn btn-danger me-2"(click)="OnClickDelete(p)">

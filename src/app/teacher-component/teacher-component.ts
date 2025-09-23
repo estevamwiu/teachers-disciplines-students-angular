@@ -21,15 +21,29 @@ export class TeacherComponent implements OnInit {
             name: [''],
             speciality: [''],
             email: [''],
-            phone: ['']
+            phone: [''],
+            portuguese: [false],
+            math: [false],
+            science: [false],
+            history: [false],
+            geography: [false]
         });
     }
-
     ngOnInit(): void {
         this.service.getAllTeachers().subscribe({
             next: (json) => this.teachers = json
         });
     }
+    
+    getSubjects(teachers: Teach): string {
+        const subjects = [];
+        if (teachers.portuguese) subjects.push('Português');
+        if (teachers.math) subjects.push('Matemática');
+        if (teachers.science) subjects.push('Ciências');
+        if (teachers.history) subjects.push('História');
+        if (teachers.geography) subjects.push('Geografia');
+        return subjects.join(', ') || 'Nenhuma';
+}
     save() {
         this.service.saveTeacher(this.formGroupTeacher.value).subscribe({
             next: (json) => {

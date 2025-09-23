@@ -1,4 +1,63 @@
 {
-  "teachers": [],
-  "matters": []
+  "teachers": [
+    {
+      "id": 1,
+      "name": null,
+      "speciality": null,
+      "email": null,
+      "phone": null,
+      "portuguese": null,
+      "math": null,
+      "science": null,
+      "history": null,
+      "geography": null
+    },
+    {
+      "id": 2,
+      "name": null,
+      "speciality": null,
+      "email": null,
+      "phone": null,
+      "portuguese": null,
+      "math": null,
+      "science": null,
+      "history": null,
+      "geography": null
+    },
+    {
+      "id": 3,
+      "name": null,
+      "speciality": null,
+      "email": null,
+      "phone": null,
+      "portuguese": null,
+      "math": null,
+      "science": null,
+      "history": null,
+      "geography": null
+    }
+  ],
+  "matters": [
+    {
+      "id": 1,
+      "name2": "",
+      "workload": "",
+      "semester": "",
+      "turn": ""
+    },
+    {
+      "id": 2,
+      "name2": null,
+      "workload": null,
+      "semester": null,
+      "turn": null
+    },
+    {
+      "id": 3,
+      "name2": "",
+      "workload": "",
+      "semester": "",
+      "turn": ""
+    }
+  ]
 }
