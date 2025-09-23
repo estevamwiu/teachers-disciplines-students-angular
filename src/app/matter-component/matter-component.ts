@@ -13,6 +13,7 @@ export class MatterComponent implements OnInit {
 
     matters: Matter [] = [];
     formGroupMatter: FormGroup;
+    isEditing: boolean = false;
 
     constructor (private formBuilder: FormBuilder, private service: MaService) {
         this.formGroupMatter = this.formBuilder.group({
@@ -36,7 +37,7 @@ export class MatterComponent implements OnInit {
             }
         });
     }
-     delete(ma: Matter) {
+     OnClickDelete(ma: Matter) {
         this.service.delete(ma).subscribe(
       {
             next: () => {
@@ -45,4 +46,20 @@ export class MatterComponent implements OnInit {
       }
     )
 }
-}
+        OnClickUpdate (ma: Matter) {
+            this.formGroupMatter.setValue(ma);
+            this.isEditing = true;
+      }
+        update() {
+            this.service.update(this.formGroupMatter.value).subscribe(
+            {
+              next: json => {
+                let index = this.matters.findIndex(p => p.id == json.id);
+                this.matters[index] = json;
+                this.isEditing = false;
+                this.formGroupMatter.reset();
+              }
+            }
+          )
+      }
+    }

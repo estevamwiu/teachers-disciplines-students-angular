@@ -1,11 +1,4 @@
 {
-  "teachers": [
-    {
-      "id": 1,
-      "name": "",
-      "speciality": "",
-      "email": "",
-      "phone": ""
-    }
-  ]
+  "teachers": [],
+  "matters": []
 }

@@ -44,12 +44,13 @@
     </label>
   </div>
 </div>
-    <button type="button" class="btn btn-primary" (click)="save()">Salvar</button>
+    <button *ngIf="!isEditing" type="button" class="btn btn-primary me-2"(click)="save()">Salvar</button>
+    <button *ngIf="isEditing" type="submit" class="btn btn-primary"(click)="update()">Atualizar</button>
   </form>
   <hr>
   <div class="row">
     <div *ngFor="let p of matters" class="col-md-4">
-      <div class="card shadow mt-3" style="width: 150px;">
+      <div class="card shadow mt-3" style="width: 250px;">
         <img src="matter.png" class="card-img-top" alt="Foto Disciplina">
         <div class="card-body">
           <h5 class="card-title">{{ p.name2 }}</h5>
@@ -57,9 +58,16 @@
             <strong>ID:</strong> {{ p.id }} <br>
             <strong>Carga Horária:</strong> {{ p.workload }} <br>
             <strong>Semestre:</strong> {{ p.semester }} <br>
-            <button class="btn btn-danger" (click)="delete(p)">
+          <td>
+            <button class="btn btn-danger me-2"(click)="OnClickDelete(p)">
             Remover
             </button>
+          </td>
+          <td>
+            <button class="btn btn-secondary" (click)="OnClickUpdate(p)" >
+            Alterar
+            </button>
+          </td>  
         </div>
       </div>
     </div>

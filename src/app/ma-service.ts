@@ -22,6 +22,9 @@ export class MaService {
       return this.http.delete<void>(`${this.apiUrl}/${ma.id}`);
      }
 
-     
+    update(ma: Matter): Observable<Matter>{
+      return this.http.put<Matter>(`${this.apiUrl}/${ma.id}`, ma);
+      }
+
 }
 
