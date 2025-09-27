@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+   constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  getImagePath(imageName: string): string {
+    return `assets/images/carrossel/${imageName}`;
+  }
 }

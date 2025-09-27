@@ -1,13 +1,13 @@
 export interface Teach {
-getSubjects: any;
+
     id?: number;
     name: string;
     speciality: string;
     email: string;
     phone: string;
-    portuguese: boolean;
-    math: boolean;
-    science: boolean;
-    history: boolean;
-    geography: boolean;
+    database: boolean;
+    information_system: boolean;
+    web_elective_i: boolean;
+    software_engineer: boolean;
+    information_security: boolean;
 }

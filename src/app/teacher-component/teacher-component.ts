@@ -22,11 +22,11 @@ export class TeacherComponent implements OnInit {
             speciality: [''],
             email: [''],
             phone: [''],
-            portuguese: [false],
-            math: [false],
-            science: [false],
-            history: [false],
-            geography: [false]
+            database: [false],
+            information_system: [false],
+            web_elective_i: [false],
+            software_engineer: [false],
+            information_security: [false]
         });
     }
     ngOnInit(): void {
@@ -37,11 +37,11 @@ export class TeacherComponent implements OnInit {
     
     getSubjects(teachers: Teach): string {
         const subjects = [];
-        if (teachers.portuguese) subjects.push('Português');
-        if (teachers.math) subjects.push('Matemática');
-        if (teachers.science) subjects.push('Ciências');
-        if (teachers.history) subjects.push('História');
-        if (teachers.geography) subjects.push('Geografia');
+        if (teachers.database) subjects.push('Banco de Dados');
+        if (teachers.information_system) subjects.push('Segurança da Informação');
+        if (teachers.web_elective_i) subjects.push('Eletiva Web I');
+        if (teachers.software_engineer) subjects.push('Engenharia de Software');
+        if (teachers.information_security) subjects.push('Segurança da Informação');
         return subjects.join(', ') || 'Nenhuma';
 }
     save() {

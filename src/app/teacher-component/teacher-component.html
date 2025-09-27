@@ -28,24 +28,24 @@
     </div>
       Selecione uma Disciplina:<br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" formControlName="portuguese" id="portuguese">
-      <label class="form-check-label" for="portuguese">Português</label>
+      <input class="form-check-input" type="checkbox" formControlName="database" id="database">
+      <label class="form-check-label" for="database">Banco de Dados</label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" formControlName="math" id="math">
-      <label class="form-check-label" for="math">Matemática</label>
+      <input class="form-check-input" type="checkbox" formControlName="information_system" id="information_system">
+      <label class="form-check-label" for="information_system">Sistemas de Informação</label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" formControlName="science" id="science">
-      <label class="form-check-label" for="science">Ciências</label>
+      <input class="form-check-input" type="checkbox" formControlName="web_elective_i" id="web_elective_i">
+      <label class="form-check-label" for="web_elective_i">Eletiva Web I</label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" formControlName="history" id="history">
-      <label class="form-check-label" for="history">História</label>
+      <input class="form-check-input" type="checkbox" formControlName="software_engineer" id="software_engineer">
+      <label class="form-check-label" for="software_engineer">Engenharia de Software</label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" formControlName="geography" id="geography">
-      <label class="form-check-label" for="geography">Geografia</label>
+      <input class="form-check-input" type="checkbox" formControlName="information_security" id="information_security">
+      <label class="form-check-label" for="information_security">Segurança da Informação</label>
     </div>
     
     <br>
@@ -57,7 +57,7 @@
   <div class="row">
     <div *ngFor="let p of teachers" class="col-md-4">
       <div class="card shadow mt-3" style="width: 300px;">
-        <img src="teacher.png" class="card-img-top" alt="Foto Professor">
+        <img src="assets/images/teacher.png" class="card-img-top" alt="Foto Professor">
         <div class="card-body">
           <h5 class="card-title">{{ p.name }}</h5>
           <p class="card-text">

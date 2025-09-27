@@ -10,6 +10,7 @@ import { HomeComponent } from './home-component/home-component';
 import { NavBarComponent } from './nav-bar-component/nav-bar-component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatterComponent } from './matter-component/matter-component';
+import { StudentComponent } from './student-component/student-component';
 
 @NgModule({
   declarations: [
@@ -18,14 +19,15 @@ import { MatterComponent } from './matter-component/matter-component';
     FooterComponent,
     HomeComponent,
     NavBarComponent,
-    MatterComponent
+    MatterComponent,
+    StudentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideHttpClient()
