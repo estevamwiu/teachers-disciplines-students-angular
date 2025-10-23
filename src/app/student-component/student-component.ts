@@ -37,7 +37,7 @@ export class StudentComponent implements OnInit {
         });
     }
     save() {
-        this.service.saveStudent(this.formGroupStudent.value).subscribe({
+        this.service.save(this.formGroupStudent.value).subscribe({
             next: (json) => {
                 this.students.push(json);
                 this.formGroupStudent.reset();
