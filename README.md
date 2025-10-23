@@ -1,4 +1,4 @@
-# Teachers, Matters and Students - Angular
+# Teachers, Disciplines and Students - Angular
 
 Um aplicativo web construído com Angular que visa **facilitar a relação entre professores e alunos**, oferecendo uma plataforma clara, responsiva e fácil de usar para o contexto educativo.
 
