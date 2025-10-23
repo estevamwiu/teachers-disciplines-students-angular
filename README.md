@@ -29,3 +29,12 @@ Este projeto permite:
    ```bash
    git clone https://github.com/estevamwiu/teachers-matters-students-angular.git
    cd teachers-matters-students-angular
+
+2. Instale as dependências:
+   npm install
+
+3. Inicie o servidor de desenvolvimento:
+   ng serve
+
+4. Abra o navegador e acesse:
+   http://localhost:4200/
