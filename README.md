@@ -17,7 +17,7 @@ Este projeto permite:
 
 ## 🛠️ Tecnologias Principais
 
-- Angular CLI (versão 20.3.1) — o scaffolding original do projeto. :contentReference[oaicite:2]{index=2}  
+- Angular CLI (versão 20.3.1) — o scaffolding original do projeto.
 - TypeScript / HTML5 / CSS3  
 - Simplicidade de configuração para rodar localmente — com `ng serve` etc.
 
